@@ -1,8 +1,8 @@
 from airflow import DAG
-from airflow.operators.bash import BashOperator
-from airflow.operators.python import PythonOperator
+from airflow.providers.standard.operators.bash import BashOperator
+from airflow.providers.standard.operators.python import PythonOperator
 from datetime import datetime
-from extract.fetch_unesco_data import fetch_unesco_sites, load_to_postgres
+from extract.extract import fetch_unesco_sites, load_to_postgres
 
 def run_extract_load():
     df = fetch_unesco_sites()
