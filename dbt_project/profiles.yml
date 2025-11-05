@@ -5,7 +5,7 @@ default:
       type: postgres
       host: postgres
       user: airflow
-      password: your_password
+      password: airflow
       port: 5432
       dbname: unesco
       schema: public
